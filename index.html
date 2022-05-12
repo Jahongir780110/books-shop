@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books shop</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="./" class="header__logo"
+        ><img src="./img/logo.png" alt="book logo"
+      /></a>
+      <a href="#orders" class="header__orders-btn">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="quantity">2</span>
+      </a>
+    </header>
+
+    <main class="main-content">
+      <section class="start-screen">
+        <h1 class="start-screen__title">
+          <span class="font-cursive">W</span>e
+          <img src="./img/heart.png" alt="heart image" /> Reading
+        </h1>
+        <a href="#catalogue" class="btn start-screen__btn">CHECK OUT</a>
+      </section>
+
+      <section id="catalogue" class="catalogue">
+        <div class="container">
+          <h2 class="catalogue__title">
+            <span class="font-cursive">T</span>HE BEST BOOKS IN THE WORLD
+          </h2>
+          <div class="catalogue__list">
+            <div class="card">
+              <img
+                src="./img/javascript-the-good-parts.jpg"
+                alt="javascript-the-good-parts"
+                class="card-img"
+              />
+              <h2 class="card-title">
+                JavaScript: The Good Parts: The Good Parts
+              </h2>
+              <h3 class="card-author">by <i>Douglas Crockford</i></h3>
+              <h4 class="card-price">Price: $30</h4>
+              <button class="btn btn-more">Show more</button>
+              <button class="btn btn-add">Add to bag</button>
+            </div>
+            <div class="card">
+              <img
+                src="../img/effective-javascript.jpg"
+                alt="effective-javascript"
+                class="card-img"
+              />
+              <h2 class="card-title">
+                Effective JavaScript: 68 Specific Ways to Harness the Power of
+                JavaScript
+              </h2>
+              <h3 class="card-author">by <i>David Herman</i></h3>
+              <h4 class="card-price">Price: $22</h4>
+              <button class="btn btn-more">Show more</button>
+              <button class="btn btn-add">Add to bag</button>
+            </div>
+            <div class="card">
+              <img
+                src="../img/javascript-the-definitive-guide.jpg"
+                alt="javascript-the-definitive-guide"
+                class="card-img"
+              />
+              <h2 class="card-title">JavaScript: The Definitive Guide</h2>
+              <h3 class="card-author">by <i>David Flanagan</i></h3>
+              <h4 class="card-price">Price: $40</h4>
+              <button class="btn btn-more">Show more</button>
+              <button class="btn btn-add">Add to bag</button>
+            </div>
+            <div class="card">
+              <img
+                src="../img/programming-javascript-applications.jpg"
+                alt="programming-javascript-applications"
+                class="card-img"
+              />
+              <h2 class="card-title">Programming JavaScript Applications</h2>
+              <h3 class="card-author">by <i>Eric Elliott</i></h3>
+              <h4 class="card-price">Price: $19</h4>
+              <button class="btn btn-more">Show more</button>
+              <button class="btn btn-add">Add to bag</button>
+            </div>
+            <div class="card">
+              <img
+                src="../img/learning-javascript-design-patterns.jpg"
+                alt="learning-javascript-design-patterns"
+                class="card-img"
+              />
+              <h2 class="card-title">Learning JavaScript Design Patterns</h2>
+              <h3 class="card-author">by <i>Addy Osmani</i></h3>
+              <h4 class="card-price">Price: $32</h4>
+              <button class="btn btn-more">Show more</button>
+              <button class="btn btn-add">Add to bag</button>
+            </div>
+            <div class="card">
+              <img
+                src="../img/programming-typescript.jpg"
+                alt="programming-typescript"
+                class="card-img"
+              />
+              <h2 class="card-title">Programming TypeScript</h2>
+              <h3 class="card-author">by <i>Boris Cherny</i></h3>
+              <h4 class="card-price">Price: $28</h4>
+              <button class="btn btn-more">Show more</button>
+              <button class="btn btn-add">Add to bag</button>
+            </div>
+            <div class="card">
+              <img
+                src="../img/learning-react.jpg"
+                alt="learning-react"
+                class="card-img"
+              />
+              <h2 class="card-title">Learning React, 2nd Edition</h2>
+              <h3 class="card-author">by <i>Alex Banks, Eve Porcello</i></h3>
+              <h4 class="card-price">Price: $25</h4>
+              <button class="btn btn-more">Show more</button>
+              <button class="btn btn-add">Add to bag</button>
+            </div>
+            <div class="card">
+              <img src="../img/nodejs-in-action.png" alt="nodejs-in-action
+              class="card-img" />
+              <h2 class="card-title">Node.js in Action</h2>
+              <h3 class="card-author">
+                by <i>Bradley Meck Alex Young and Mike Cantelon</i>
+              </h3>
+              <h4 class="card-price">Price: $38</h4>
+              <button class="btn btn-more">Show more</button>
+              <button class="btn btn-add">Add to bag</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="orders" class="orders">
+        <div class="container">
+          <h2 class="orders__title">
+            <span class="font-cursive">Y</span>OUR ORDERS
+          </h2>
+          <div class="orders__books">
+            <h1 hidden class="no-item"><i>You haven't ordered yet!</i></h1>
+            <div class="orders__books-book">
+              <img
+                src="./img/effective-javascript.jpg"
+                alt="effective-javascript"
+              />
+            </div>
+            <div class="orders__books-book">
+              <img
+                src="./img/javascript-the-definitive-guide.jpg"
+                alt="effective-javascript"
+              />
+            </div>
+            <div class="orders__books-book">
+              <img src="./img/learning-react.jpg" alt="effective-javascript" />
+            </div>
+            <div class="orders__books-book">
+              <img
+                src="./img/effective-javascript.jpg"
+                alt="effective-javascript"
+              />
+            </div>
+            <div class="orders__books-book">
+              <img
+                src="./img/javascript-the-definitive-guide.jpg"
+                alt="effective-javascript"
+              />
+            </div>
+            <div class="orders__books-book">
+              <img src="./img/learning-react.jpg" alt="effective-javascript" />
+            </div>
+          </div>
+          <div class="orders__price">
+            <h2 class="price">Total price: $40</h2>
+            <button class="btn">Confirm Order</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Modal -->
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
