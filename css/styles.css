@@ -307,6 +307,83 @@ img {
   border-color: #138496;
 }
 
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.modal.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal__backdrop {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(41, 41, 41, 0.6);
+}
+
+.modal__window {
+  width: 900px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fafafa;
+  border-radius: 9px;
+  transition: 0.3s;
+  padding: 10px;
+}
+
+.modal__close {
+  position: absolute;
+  top: -36px;
+  right: -36px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 28px;
+  line-height: 1.15;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: transparent;
+  color: #dc3545;
+  text-shadow: rgba(0, 0, 0, 0.7) 0px 0px 5px;
+}
+
+.modal__image {
+  display: flex;
+  flex-basis: 360px;
+  flex-shrink: 0;
+}
+
+.modal__image img {
+  height: 472px;
+  object-fit: cover;
+}
+
+.modal__content {
+  padding-top: 36px;
+  padding-left: 23px;
+  padding-right: 20px;
+  color: #000;
+}
+
 @keyframes beating {
   0% {
     transform: scale(1);
