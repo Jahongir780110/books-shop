@@ -270,8 +270,7 @@ img {
   transition: 0.3s;
 }
 
-.orders__books-book::after {
-  content: "✖";
+.orders__books-book .close {
   width: 30px;
   height: 30px;
   position: absolute;
@@ -333,6 +332,12 @@ img {
 }
 
 .orders__price button:hover {
+  background-color: #138496;
+  border-color: #138496;
+}
+
+.orders__price button:disabled {
+  cursor: no-drop;
   background-color: #138496;
   border-color: #138496;
 }
