@@ -229,7 +229,7 @@ function refreshOrderedBooks() {
   document.querySelector(".main-content").append(orders);
 
   ordersBtn.addEventListener("click", () => {
-    alert("success");
+    window.open("../order.html", "_blank");
   });
 
   // modal

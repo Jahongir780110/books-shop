@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order form</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/order.css" />
+  </head>
+  <body>
+    <main class="main-content">
+      <div class="container">
+        <h1 class="title">
+          <span class="font-cursive">T</span>HANK YOU FOR YOUR PURCHASE!
+        </h1>
+        <h2 class="subtitle">PLEASE FILL IN THE FORMS BELOW</h2>
+
+        <form class="form">
+          <div class="form-group w-50 name">
+            <input type="text" id="name" />
+            <label for="name">Name:</label>
+          </div>
+
+          <div class="form-group w-50 surname">
+            <input type="text" id="surname" />
+            <label for="surname">Surname:</label>
+          </div>
+
+          <div class="form-group w-50 date">
+            <input type="date" id="date" />
+            <label for="date">Delivery date:</label>
+          </div>
+
+          <div class="form-group w-50 street">
+            <input type="text" id="street" />
+            <label for="street">Street:</label>
+          </div>
+
+          <div class="form-group w-50 house">
+            <input type="text" id="house" />
+            <label for="house">House number:</label>
+          </div>
+
+          <div class="form-group w-50 flat">
+            <input type="text" id="flat" />
+            <label for="flat">Flat number:</label>
+          </div>
+
+          <div class="form-group w-50 payment">
+            <div class="label">Choose the payment type:</div>
+            <div class="radio-wrapper">
+              <input type="radio" name="payment" id="cash" />
+              <label for="cash">Cash</label>
+              <input type="radio" name="payment" id="card" />
+              <label for="card">Card</label>
+            </div>
+          </div>
+
+          <div class="form-group w-50 gift">
+            <div class="label">Choose 2 gifts:</div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" name="gift" id="pack" />
+              <label for="pack">pack as a gift</label> <br />
+
+              <input type="checkbox" name="gift" id="postcard" />
+              <label for="postcard">add postcard</label> <br />
+
+              <input type="checkbox" name="gift" id="discount" />
+              <label for="discount">provide 2% discount to the next time</label>
+              <br />
+
+              <input type="checkbox" name="pen" id="pen" />
+              <label for="pen">branded pen or pencil</label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

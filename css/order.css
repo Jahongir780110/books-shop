@@ -1,0 +1,131 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-content {
+  height: 100%;
+  overflow-y: auto;
+  background: url(../img/wooden-bg.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-attachment: fixed;
+}
+
+.title {
+  margin-bottom: 12px;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 500;
+  text-shadow: 2px 2px 5px #aaa;
+  color: #545454;
+  font-style: italic;
+  transition: 0.3s;
+}
+
+.font-cursive {
+  font-family: "Great Vibes", cursive;
+  font-size: 64px;
+  margin-right: 20px;
+}
+
+.subtitle {
+  margin-top: 0;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 500;
+  text-shadow: 2px 2px 5px #aaa;
+  color: #545454;
+  font-style: italic;
+  transition: 0.3s;
+}
+
+.form {
+  margin-top: 64px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 48px;
+}
+
+.form-group.w-50 {
+  width: 50%;
+}
+
+.form-group.date label {
+  top: -12px;
+  left: 0;
+}
+
+.form-group.payment .label,
+.form-group.gift .label {
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.form-group.payment input,
+.form-group.gift input {
+  width: auto;
+  cursor: pointer;
+}
+
+.form-group.payment input:nth-child(3) {
+  margin-left: 32px;
+}
+
+.form-group.payment label,
+.form-group.gift label {
+  position: static;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.form-group input {
+  width: 80%;
+  padding: 6px 12px;
+  border: 1px solid silver;
+  border-radius: 6px;
+  outline: none;
+}
+
+.form-group input:focus ~ label {
+  top: -12px;
+  left: 0;
+}
+
+.form-group label {
+  color: #333;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition: 0.3s;
+  pointer-events: none;
+}
