@@ -28,40 +28,56 @@
         <form class="form">
           <div class="form-group w-50 name">
             <input type="text" id="name" />
-            <label for="name">Name:</label>
+            <label for="name">Name <span class="mandatory">*</span></label>
+            <div class="error-message"></div>
           </div>
 
           <div class="form-group w-50 surname">
             <input type="text" id="surname" />
-            <label for="surname">Surname:</label>
+            <label for="surname"
+              >Surname <span class="mandatory">*</span></label
+            >
+            <div class="error-message"></div>
           </div>
 
           <div class="form-group w-50 date">
             <input type="date" id="date" />
-            <label for="date">Delivery date:</label>
+            <label for="date"
+              >Delivery date <span class="mandatory">*</span></label
+            >
+            <div class="error-message"></div>
           </div>
 
           <div class="form-group w-50 street">
             <input type="text" id="street" />
-            <label for="street">Street:</label>
+            <label for="street">Street <span class="mandatory">*</span></label>
+            <div class="error-message"></div>
           </div>
 
           <div class="form-group w-50 house">
             <input type="text" id="house" />
-            <label for="house">House number:</label>
+            <label for="house"
+              >House number <span class="mandatory">*</span></label
+            >
+            <div class="error-message"></div>
           </div>
 
           <div class="form-group w-50 flat">
             <input type="text" id="flat" />
-            <label for="flat">Flat number:</label>
+            <label for="flat"
+              >Flat number <span class="mandatory">*</span></label
+            >
+            <div class="error-message"></div>
           </div>
 
           <div class="form-group w-50 payment">
-            <div class="label">Choose the payment type:</div>
+            <div class="label">
+              Choose the payment type <span class="mandatory">*</span>
+            </div>
             <div class="radio-wrapper">
-              <input type="radio" name="payment" id="cash" />
+              <input type="radio" name="payment" value="cash" id="cash" />
               <label for="cash">Cash</label>
-              <input type="radio" name="payment" id="card" />
+              <input type="radio" name="payment" value="card" id="card" />
               <label for="card">Card</label>
             </div>
           </div>
@@ -83,8 +99,14 @@
               <label for="pen">branded pen or pencil</label>
             </div>
           </div>
+
+          <div class="form-group submit">
+            <button type="submit" disabled="disabled">Submit</button>
+          </div>
         </form>
       </div>
     </main>
+
+    <script src="./js/order.js"></script>
   </body>
 </html>

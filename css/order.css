@@ -75,6 +75,18 @@ body {
   margin-bottom: 48px;
 }
 
+.form-group.error label {
+  color: #dc3545;
+}
+
+.form-group.error input {
+  border-color: #dc3545;
+}
+
+.form-group.error .error-message {
+  display: block;
+}
+
 .form-group.w-50 {
   width: 50%;
 }
@@ -86,8 +98,12 @@ body {
 
 .form-group.payment .label,
 .form-group.gift .label {
-  color: #333;
+  color: #000;
   margin-bottom: 12px;
+}
+
+.form-group.payment .label .mandatory {
+  color: #dc3545;
 }
 
 .form-group.payment input,
@@ -105,6 +121,7 @@ body {
   position: static;
   pointer-events: all;
   cursor: pointer;
+  color: #000;
 }
 
 .form-group input {
@@ -128,4 +145,54 @@ body {
   transform: translateY(-50%);
   transition: 0.3s;
   pointer-events: none;
+}
+
+.form-group label .mandatory {
+  color: #dc3545;
+}
+
+.form-group .error-message {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 12px;
+  color: #dc3545;
+  font-size: 12px;
+  display: none;
+}
+
+.form-group.containsValue label {
+  top: -12px !important;
+  left: 0 !important;
+}
+
+.form-group.submit {
+  width: 100%;
+  text-align: center;
+}
+
+.form-group.submit button {
+  color: #fff;
+  background-color: #17a2b8;
+  outline: none !important;
+  display: inline-block;
+  cursor: pointer;
+  padding: 6px 48px;
+  font-weight: 400;
+  text-align: center;
+  border: 1px solid #17a2b8;
+  border-radius: 4px;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.form-group.submit button:hover {
+  background-color: #138496;
+  border-color: #138496;
+}
+
+.form-group.submit button:disabled {
+  cursor: no-drop;
+  background-color: #138496;
+  border-color: #138496;
 }
