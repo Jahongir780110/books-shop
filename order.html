@@ -85,19 +85,40 @@
           <div class="form-group w-50 gift">
             <div class="label">Choose 2 gifts:</div>
             <div class="checkbox-wrapper">
-              <input type="checkbox" name="gift" id="pack" />
+              <input
+                type="checkbox"
+                name="gift"
+                id="pack"
+                value="pack as a gift"
+              />
               <label for="pack">pack as a gift</label> <br />
 
-              <input type="checkbox" name="gift" id="postcard" />
+              <input
+                type="checkbox"
+                name="gift"
+                id="postcard"
+                value="add postcard"
+              />
               <label for="postcard">add postcard</label> <br />
 
-              <input type="checkbox" name="gift" id="discount" />
+              <input
+                type="checkbox"
+                name="gift"
+                id="discount"
+                value="provide 2% discount to the next time"
+              />
               <label for="discount">provide 2% discount to the next time</label>
               <br />
 
-              <input type="checkbox" name="pen" id="pen" />
+              <input
+                type="checkbox"
+                name="pen"
+                id="pen"
+                value="branded pen or pencil"
+              />
               <label for="pen">branded pen or pencil</label>
             </div>
+            <div class="error-message"></div>
           </div>
 
           <div class="form-group submit">
@@ -106,6 +127,43 @@
         </form>
       </div>
     </main>
+
+    <div class="modal hide">
+      <div class="modal__backdrop"></div>
+      <div class="modal__window">
+        <i class="modal__close">✖</i>
+        <h2 class="modal__heading">
+          Thank you for your order, it's been created!
+        </h2>
+        <h3 class="modal__subheading">Here you can see order information</h3>
+        <ul class="modal__list">
+          <li class="list__item name">
+            <strong>Customer name:</strong> <i class="value"></i>
+          </li>
+          <li class="list__item surname">
+            <strong>Customer surname:</strong> <i class="value"></i>
+          </li>
+          <li class="list__item date">
+            <strong>Delivery date:</strong> <i class="value"></i>
+          </li>
+          <li class="list__item street">
+            <strong>Street:</strong> <i class="value"></i>
+          </li>
+          <li class="list__item houseNumber">
+            <strong>House number:</strong> <i class="value"></i>
+          </li>
+          <li class="list__item flatNumber">
+            <strong>Flat number:</strong> <i class="value"></i>
+          </li>
+          <li class="list__item payment">
+            <strong>Payment type:</strong> <i class="value"></i>
+          </li>
+          <li class="list__item gifts">
+            <strong>Gifts:</strong> <i class="value"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <script src="./js/order.js"></script>
   </body>

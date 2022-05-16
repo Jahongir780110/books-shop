@@ -17,6 +17,17 @@ const checkValidation = () => {
   }
 };
 
+const checkGiftCount = () => {
+  const gifts = gift.querySelectorAll("input");
+  let giftCount = 0;
+  gifts.forEach((gift) => {
+    if (gift.checked) {
+      giftCount++;
+    }
+  });
+  return giftCount <= 2;
+};
+
 const customerName = document.querySelector(".name");
 const surname = document.querySelector(".surname");
 const date = document.querySelector(".date");
@@ -26,6 +37,9 @@ const flatNumber = document.querySelector(".flat");
 const payment = document.querySelector(".payment");
 const gift = document.querySelector(".gift");
 const submitBtn = document.querySelector(".submit");
+const modal = document.querySelector(".modal");
+const modalClose = document.querySelector(".modal__close");
+const backdrop = document.querySelector(".modal__backdrop");
 
 const isValidForm = {
   customerName: false,
@@ -35,6 +49,7 @@ const isValidForm = {
   houseNumber: false,
   flatNumber: false,
   payment: false,
+  gift: true,
 };
 
 customerName.querySelector("input").addEventListener("blur", (e) => {
@@ -84,7 +99,7 @@ surname.querySelector("input").addEventListener("blur", (e) => {
     checkValidation();
     return;
   } else if (!isAllLetters(value)) {
-    isValidForm.customerName = false;
+    isValidForm.surname = false;
     surname.querySelector(".error-message").innerText =
       "Please add only letters";
     surname.classList.add("error");
@@ -196,7 +211,53 @@ payment.querySelectorAll("input").forEach((radio) => {
   });
 });
 
+gift.querySelectorAll("input").forEach((checkbox) => {
+  checkbox.addEventListener("change", () => {
+    if (checkGiftCount()) {
+      isValidForm.gift = true;
+      gift.classList.remove("error");
+    } else {
+      isValidForm.gift = false;
+      gift.querySelector(".error-message").innerText =
+        "Please choose at most 2 gifts";
+      gift.classList.add("error");
+    }
+    checkValidation();
+  });
+});
+
 submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  alert("success");
+  modal.querySelector(".name .value").innerText =
+    customerName.querySelector("input").value;
+  modal.querySelector(".surname").querySelector(".value").innerText =
+    surname.querySelector("input").value;
+  modal.querySelector(".date").querySelector(".value").innerText =
+    date.querySelector("input").value;
+  modal.querySelector(".street").querySelector(".value").innerText =
+    street.querySelector("input").value;
+  modal.querySelector(".houseNumber").querySelector(".value").innerText =
+    houseNumber.querySelector("input").value;
+  modal.querySelector(".flatNumber").querySelector(".value").innerText =
+    flatNumber.querySelector("input").value;
+  modal.querySelector(".payment").querySelector(".value").innerText =
+    payment.querySelector("input:checked").value;
+
+  const gifts = [];
+  gift.querySelectorAll("input:checked").forEach((checkbox) => {
+    gifts.push(checkbox.value);
+  });
+
+  modal.querySelector(".gifts").querySelector(".value").innerText =
+    gifts.join(", ");
+
+  modal.classList.remove("hide");
+});
+
+modalClose.addEventListener("click", () => {
+  modal.classList.add("hide");
+});
+
+backdrop.addEventListener("click", () => {
+  modal.classList.add("hide");
 });
