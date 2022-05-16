@@ -222,7 +222,7 @@ function refreshOrderedBooks() {
   ordersBtn.innerText = "Confirm order";
 
   ordersBooks.prepend(ordersNoItem);
-  ordersTitle.append(ordersCursiveLetter, "OUR ORDERS");
+  ordersTitle.append(ordersCursiveLetter, "OUR BOOKS");
   ordersPrice.append(ordersPriceQnty, ordersBtn);
   ordersContainer.append(ordersTitle, ordersBooks, ordersPrice);
   orders.append(ordersContainer);
