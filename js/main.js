@@ -1,4 +1,5 @@
 const orderedBooks = [];
+let draggingBook = null;
 
 function addBook(book) {
   if (orderedBooks.some((b) => b.title === book.title)) {
@@ -97,13 +98,23 @@ function refreshOrderedBooks() {
   header.append(logo, headerBtn);
   document.body.prepend(header);
 
+  headerBtn.addEventListener("dragenter", (e) => {
+    e.preventDefault();
+  });
+  headerBtn.addEventListener("dragover", (e) => {
+    e.preventDefault();
+  });
+  headerBtn.addEventListener("drop", () => {
+    addBook(draggingBook);
+  });
+
   // adding main content
   const main = document.createElement("main");
   main.classList.add("main-content");
   document.querySelector(".header").after(main);
 
   // start screen section
-  const startScreen = document.createElement("start-screen");
+  const startScreen = document.createElement("section");
   const startTitle = document.createElement("h1");
   const startCursiveLetter = document.createElement("span");
   const startImage = document.createElement("img");
@@ -152,9 +163,10 @@ function refreshOrderedBooks() {
     cardImg.setAttribute("src", book.imageLink);
     cardImg.setAttribute("alt", book.title);
     cardImg.classList.add("card-img");
+    cardImg.setAttribute("draggable", "true");
     cardTitle.classList.add("card-title");
     cardTitle.innerText = book.title;
-    cardAuthor.classList.add("card-authod");
+    cardAuthor.classList.add("card-author");
     cardAuthorName.innerText = book.author;
     cardPrice.classList.add("card-price");
     cardPrice.innerText = "Price: $" + book.price;
@@ -173,6 +185,23 @@ function refreshOrderedBooks() {
       cardAddBtn
     );
     catalogueList.append(card);
+
+    cardImg.addEventListener("dragstart", () => {
+      draggingBook = book;
+      setTimeout(() => {
+        const backdrop = document.querySelector(".modal__backdrop");
+        backdrop.style.position = "fixed";
+        document.querySelector("main").after(backdrop);
+      }, 0);
+    });
+    cardImg.addEventListener("dragend", () => {
+      draggingBook = null;
+      setTimeout(() => {
+        const backdrop = document.querySelector(".modal__backdrop");
+        backdrop.style.position = "absolute";
+        document.querySelector(".modal").prepend(backdrop);
+      }, 0);
+    });
 
     cardMoreBtn.addEventListener("click", () => {
       const modal = document.querySelector(".modal");

@@ -59,6 +59,7 @@ img {
   width: 250px;
   height: 325px;
   object-fit: cover;
+  cursor: grab;
 }
 
 .card-author {
@@ -206,6 +207,9 @@ img {
   color: #6c757d;
   font-style: italic;
   transition: 0.3s;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .catalogue__title:hover {
@@ -243,6 +247,9 @@ img {
   color: #f8f9fa;
   font-style: italic;
   transition: 0.3s;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .orders__title:hover {
@@ -389,8 +396,8 @@ img {
 
 .modal__close {
   position: absolute;
-  top: -36px;
-  right: -36px;
+  top: 0;
+  right: 2px;
   width: 40px;
   height: 40px;
   display: flex;
@@ -404,7 +411,6 @@ img {
   transition: 0.3s;
   background-color: transparent;
   color: #dc3545;
-  text-shadow: rgba(0, 0, 0, 0.7) 0px 0px 5px;
 }
 
 .modal__image {
