@@ -72,7 +72,7 @@ function refreshOrderedBooks() {
 }
 
 (async function () {
-  const booksData = await fetch("../JSON/books.json").then((res) => res.json());
+  const booksData = await fetch("./JSON/books.json").then((res) => res.json());
 
   // adding header
   const header = document.createElement("header");
