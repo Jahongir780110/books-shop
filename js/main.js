@@ -258,7 +258,7 @@ function refreshOrderedBooks() {
   document.querySelector(".main-content").append(orders);
 
   ordersBtn.addEventListener("click", () => {
-    window.open("../order.html", "_blank");
+    window.open("./order.html", "_blank");
   });
 
   // modal
@@ -281,8 +281,8 @@ function refreshOrderedBooks() {
   modalClose.classList.add("modal__close");
   modalClose.innerText = "✖";
   modalImage.classList.add("modal__image");
-  modalImageImg.setAttribute("src", "../img/learning-react.jpg");
-  modalImageImg.setAttribute("alt", "../img/learning-react.jpg");
+  modalImageImg.setAttribute("src", "./img/learning-react.jpg");
+  modalImageImg.setAttribute("alt", "./img/learning-react.jpg");
   modalContent.classList.add("modal__content");
   modalHeading.classList.add("modal__heading");
   modalHeading.innerText = "Learning React, 2nd Edition";
