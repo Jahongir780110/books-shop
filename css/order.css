@@ -211,8 +211,7 @@ body {
 }
 
 .modal.hide {
-  opacity: 0;
-  visibility: hidden;
+  display: none;
 }
 
 .modal__backdrop {

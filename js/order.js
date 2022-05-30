@@ -40,6 +40,7 @@ const submitBtn = document.querySelector(".submit");
 const modal = document.querySelector(".modal");
 const modalClose = document.querySelector(".modal__close");
 const backdrop = document.querySelector(".modal__backdrop");
+console.log(backdrop);
 
 const isValidForm = {
   customerName: false,
@@ -254,9 +255,9 @@ submitBtn.addEventListener("click", (e) => {
   modal.classList.remove("hide");
 });
 
-modalClose.addEventListener("click", () => {
-  modal.classList.add("hide");
-});
+// modalClose.addEventListener("click", () => {
+//   modal.classList.add("hide");
+// });
 
 backdrop.addEventListener("click", () => {
   modal.classList.add("hide");
